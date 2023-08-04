@@ -10,7 +10,7 @@ def find_comments(input_path: str, output_path: str):
     soup = BeautifulSoup(html_file, "html.parser")
 
     # open a new csv file in a new folder to write data into
-    with open(output_path, "w", newline="", encoding="utf16") as f:
+    with open(output_path, "w", newline="", encoding="utf8") as f:
 
         # the header labels each column for readability
         csv_writer = writer(f)
@@ -19,7 +19,6 @@ def find_comments(input_path: str, output_path: str):
 
         # top level comments are written with the class <div class="md">
         comments = soup.find_all("div", {"class": "md"})
-        print(len(comments))
 
         for comment in comments:
             if comment.p == None:

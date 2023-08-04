@@ -6,7 +6,7 @@ from csv import writer
 def find_comments(input_paths: str, output_path: str):
 
     # open a new csv file in a new folder to write data into
-    with open(output_path, "w", newline="", encoding="utf16") as f:
+    with open(output_path, "w", newline="", encoding="utf8") as f:
 
         # the header labels each column for readability
         csv_writer = writer(f)
