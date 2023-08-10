@@ -11,15 +11,13 @@ def find_sentences(input_urls: str, output_path: str):
 
         # the header labels each column for readability
         csv_writer = writer(f)
-        header = ["Sentences"]
-        csv_writer.writerow(header)
 
-        # import the html file to be read using BeautifulSoup
+        # import the url using BeautifulSoup and requests
         for url in input_urls:
             r = requests.get(url)
             soup = BeautifulSoup(r.text, "html.parser")
 
-            # find all texts in the 
+            # find all texts in the wikipedia page
             comments = soup.find_all('p')
 
             for comment in comments:
@@ -34,13 +32,11 @@ def find_sentences(input_urls: str, output_path: str):
 # main method that calls the web scraper function
 if __name__ == "__main__":
 
-    # define the input path storing the html files and
-    # the output path where we would like to store the comments
-    input_path = "websites/"
+    # define the output path where we would like to store the comments
     output_path = "sentences_EN.csv"
     
     # list all the urls to scrape from wikipedia
-    urls = ["https://en.wikipedia.org/wiki/Apricot"]
+    urls = ["https://en.wikipedia.org/wiki/United_States"]
 
     # run the comment scraping tool
     find_sentences(urls, output_path)
