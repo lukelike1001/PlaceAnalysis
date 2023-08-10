@@ -33,7 +33,7 @@ def find_sentences(input_urls: str, output_path: str):
 if __name__ == "__main__":
 
     # define the output path where we would like to store the comments
-    output_path = "sentences_EN.csv"
+    output_path = "data/sentences_EN.csv"
     
     # list all the urls to scrape from wikipedia
     urls = ["https://en.wikipedia.org/wiki/United_States"]

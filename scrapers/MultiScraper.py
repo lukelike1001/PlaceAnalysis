@@ -33,7 +33,7 @@ if __name__ == "__main__":
     # define the input path storing the html files and
     # the output path where we would like to store the comments
     input_path = "websites/"
-    output_path = "place_comments.csv"
+    output_path = "data/place_comments.csv"
     
     # list all the html files we would like to scrape
     html_files = ["place_is_back.html", "timelapse_day_1.html", "leaderboard_day_1.html",

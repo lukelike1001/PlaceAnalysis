@@ -29,5 +29,5 @@ def find_comments(input_path: str, output_path: str):
 # main method that calls the web scraper function
 if __name__ == "__main__":
     input_path = "websites/place23.html"
-    output_path = "place23.csv"
+    output_path = "data/place23.csv"
     find_comments(input_path, output_path)
